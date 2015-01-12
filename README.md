@@ -1,0 +1,1 @@
+See instructions in the [wiki](https://github.com/julienrf/tp-play/wiki/TP-Play-(Java)).

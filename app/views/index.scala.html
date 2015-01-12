@@ -1,0 +1,11 @@
+@(username: String, journeys: java.util.List[services.models.Journey])
+
+@layout {
+    <h1>Hello @username</h1>
+
+    <ul>
+        @for(journey <- journeys) {
+            <li><a href="@routes.Journeys.journey(journey.id)">@journey.name</a> (<a href="@routes.Journeys.observe(journey.id)">observe</a>)</li>
+        }
+    </ul>
+}

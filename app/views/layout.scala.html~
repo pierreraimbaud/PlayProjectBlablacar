@@ -1,0 +1,11 @@
+@(content: Html)
+
+@skel {
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="@routes.Journeys.journeys()">Journeys</a>
+            <a class="navbar-text pull-right" href="???">Sign off</a>
+        </div>
+    </div>
+    @content
+}

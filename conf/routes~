@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+# Home page
+GET        /                                   controllers.Journeys.journeys()
+
+# TODO Part 1: insert routes for authentication here
+
+# Other Journeys actions
+GET        /journey/:id                        controllers.Journeys.journey(id: Long)
+# TODO Part 2: insert routes handling users joining a journey here
+
+# Part 3: Stream manipulation
+GET        /journey/:id/observe                controllers.Journeys.observe(id: Long)
+GET        /journey/:id/attendees              controllers.Journeys.attendees(id: Long)
+
+# JavaScript reverse router
+GET        /assets/javascript/routes.js        controllers.Journeys.javaScriptRouter()
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file                       controllers.Assets.at(path="/public", file)

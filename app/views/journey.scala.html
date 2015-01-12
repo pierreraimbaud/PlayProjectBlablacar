@@ -1,0 +1,24 @@
+@(journey: services.models.Journey, joinForm: Form[Journeys.Join], attendForm: Form[Journeys.Attend])
+
+@layout {
+
+    <h1>Attend to “@journey.name”</h1>
+
+    @if(journey.attendees.nonEmpty) {
+        @helper.form(???) {
+            <fieldset>
+                <legend>Join an attending driver</legend>
+                ???
+                <button>Join the selected driver</button>
+            </fieldset>
+        }
+        <hr/>
+    }
+    @helper.form(???) {
+        <fieldset>
+            <legend>Attend as a driver</legend>
+            ???
+            <button>Attend to this event as a driver</button>
+        </fieldset>
+    }
+}

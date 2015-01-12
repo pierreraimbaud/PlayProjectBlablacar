@@ -1,0 +1,12 @@
+@(journeyId: Long)
+
+@layout {
+
+    <ul class="log" data-journey-id="@journeyId"></ul>
+
+    <script src="@routes.Journeys.javaScriptRouter()"></script>
+    <script src="@routes.Assets.at("js/observe.js")"></script>
+    <script>
+        observeJourney(document.querySelector('.log'));
+    </script>
+}
